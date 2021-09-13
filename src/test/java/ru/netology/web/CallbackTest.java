@@ -1,7 +1,6 @@
 package ru.netology.web;
 
 import com.codeborne.selenide.SelenideElement;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.exactText;
@@ -27,7 +26,7 @@ public class CallbackTest {
     void shouldPass() {
         open("http://localhost:9999");
         SelenideElement form = $("[id=root]");
-        form.$("[data-test-id=name] input").setValue("Касиль-Марков Лев");
+        form.$("[data-test-id=name] input").setValue("Васин-Красин Василь");
         form.$("[data-test-id=phone] input").setValue("+71234567890");
         form.$("[data-test-id=agreement]").click();
         form.$("[role=button]").click();
